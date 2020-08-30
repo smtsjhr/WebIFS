@@ -1,6 +1,8 @@
 var a = 1.7943;  
 var phase = 5;
 var scale = 1;
+var W;
+var H;
 
 const enable_interaction = true;
 
@@ -12,6 +14,11 @@ var fpsInterval, startTime, now, then, elapsed;
 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+
+window.onresize = function(e) {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+}
 
 var dwitter_mode = true;
 
